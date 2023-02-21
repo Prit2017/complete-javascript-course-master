@@ -404,7 +404,6 @@ TEST DATA: Images in the img folder. Test the error handler by passing a wrong i
 GOOD LUCK 😀
 */
 
-/*
 const wait = function (seconds) {
   return new Promise(function (resolve) {
     setTimeout(resolve, seconds * 1000);
@@ -450,6 +449,27 @@ createImage('img/img-1.jpg')
     currentImg.style.display = 'none';
   })
   .catch(err => console.error(err));
+
+//////////////////////////////////
+////////
+///////////////
+
+/*
+createImage('img/img-1.jpg').then(img => {
+  currentImg = img;
+  console.log('Image 1 loaded');
+return wait(2);
+}).then(() => {
+  currentImg.style.display = 'none';
+  return creatImage('img/img-2.jpg');
+
+})
+.then(img => {
+  currentImg = immg;
+  console.log('Image 2loaded');
+  return wait(2);
+})
+
 
 
 ///////////////////////////////////////
